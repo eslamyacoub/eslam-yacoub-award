@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Eslam Yacoub – THE Arab World Awards 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8CC7A;
+    --gold-pale: #F5E9C4;
+    --deep: #0B1322;
+    --navy: #122040;
+    --navy-mid: #1E3360;
+    --slate: #2E4A7A;
+    --cream: #F8F5EE;
+    --warm-white: #FEFCF7;
+    --text: #1A2540;
+    --text-muted: #5A6A8A;
+    --accent: #8B2635;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--text);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(11,19,34,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .nav-brand {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.2em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(248,245,238,0.75); text-decoration: none;
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--deep);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: center;
+    padding-top: 60px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 70% at 70% 50%, rgba(30,51,96,0.8) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 50% at 20% 80%, rgba(139,38,53,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 40% at 80% 10%, rgba(201,168,76,0.08) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: 
+      linear-gradient(rgba(201,168,76,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,1) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    width: 100%; max-width: 1300px; margin: 0 auto;
+    padding: 6rem 4rem;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 6rem;
+    align-items: center;
+  }
+  .hero-text { }
+  .award-badge {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 2px;
+    padding: 0.5rem 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+  .award-badge-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .award-badge span {
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  }
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+  .hero-title em {
+    font-style: italic; color: var(--gold);
+    display: block;
+  }
+  .hero-subtitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; letter-spacing: 0.2em;
+    color: rgba(201,168,76,0.7); text-transform: uppercase;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+  }
+  .hero-desc {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.2rem; font-weight: 300;
+    color: rgba(248,245,238,0.78);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+  .hero-ctas { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .btn-gold {
+    display: inline-block; padding: 0.85rem 2.2rem;
+    background: var(--gold);
+    color: var(--deep);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none; font-weight: 500;
+    border: 2px solid var(--gold);
+    transition: all 0.3s; cursor: pointer;
+  }
+  .btn-gold:hover { background: transparent; color: var(--gold); }
+  .btn-outline {
+    display: inline-block; padding: 0.85rem 2.2rem;
+    background: transparent;
+    color: rgba(248,245,238,0.8);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(248,245,238,0.3);
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-photo-col {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .photo-frame {
+    position: relative; width: 320px;
+  }
+  .photo-frame::before {
+    content: '';
+    position: absolute; top: -16px; left: -16px; right: 16px; bottom: 16px;
+    border: 1px solid rgba(201,168,76,0.4);
+    z-index: 0;
+  }
+  .photo-frame::after {
+    content: '';
+    position: absolute; top: 16px; left: 16px; right: -16px; bottom: -16px;
+    background: rgba(201,168,76,0.06);
+    z-index: 0;
+  }
+  .photo-frame img {
+    position: relative; z-index: 1;
+    width: 100%;
+    display: block;
+    filter: grayscale(15%) contrast(1.05);
+  }
+  .photo-caption {
+    margin-top: 2rem; text-align: center;
+  }
+  .photo-caption strong {
+    display: block;
+    font-family: 'Playfair Display', serif; font-size: 1.3rem;
+    color: var(--cream); font-weight: 600;
+  }
+  .photo-caption span {
+    font-family: 'DM Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-light); opacity: 0.8;
+  }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: var(--gold);
+    padding: 2.5rem 4rem;
+  }
+  .stats-inner {
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem;
+  }
+  .stat {
+    text-align: center;
+    border-right: 1px solid rgba(11,19,34,0.2);
+    padding: 0 1rem;
+  }
+  .stat:last-child { border-right: none; }
+  .stat-num {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem; font-weight: 900;
+    color: var(--deep); line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem; letter-spacing: 0.15em;
+    text-transform: uppercase; color: rgba(11,19,34,0.7);
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 7rem 4rem; }
+  .section-inner { max-width: 1300px; margin: 0 auto; }
+  .section-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1rem; display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 700; line-height: 1.15;
+    color: var(--navy); margin-bottom: 2rem;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  /* ── ABOUT / SUBMISSION ── */
+  .about-section { background: var(--cream); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
+    align-items: start;
+  }
+  .about-text p {
+    margin-bottom: 1.4rem; color: var(--text-muted);
+    font-size: 1.05rem; line-height: 1.85;
+  }
+  .about-text p strong { color: var(--navy); font-weight: 600; }
+  .submission-title-box {
+    background: var(--navy);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--gold);
+  }
+  .submission-title-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-style: italic;
+    color: var(--cream); font-weight: 600; line-height: 1.4;
+  }
+  .submission-title-box .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem; letter-spacing: 0.2em;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 0.75rem; display: block;
+  }
+  .meta-list { list-style: none; }
+  .meta-list li {
+    display: flex; gap: 1rem; padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(30,51,96,0.1);
+    font-size: 0.95rem;
+  }
+  .meta-list li:last-child { border-bottom: none; }
+  .meta-key {
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); min-width: 110px; padding-top: 2px;
+  }
+  .meta-val { color: var(--navy); font-weight: 600; }
+
+  /* ── INNOVATION STEPS ── */
+  .innovation-section { background: var(--warm-white); }
+  .steps-timeline { position: relative; margin-top: 3rem; }
+  .steps-timeline::before {
+    content: '';
+    position: absolute; left: 28px; top: 0; bottom: 0;
+    width: 1px; background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .step-item {
+    display: grid; grid-template-columns: 60px 1fr; gap: 2.5rem;
+    margin-bottom: 4rem; position: relative;
+  }
+  .step-num {
+    width: 56px; height: 56px;
+    background: var(--navy); border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace; font-size: 0.75rem;
+    font-weight: 500; color: var(--gold);
+    position: relative; z-index: 2;
+    flex-shrink: 0;
+  }
+  .step-body { padding-top: 0.5rem; }
+  .step-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 0.25rem;
+  }
+  .step-sub {
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 1.2rem;
+  }
+  .step-body p {
+    color: var(--text-muted); line-height: 1.85;
+    font-size: 1rem; margin-bottom: 1rem;
+  }
+  .step-highlight {
+    background: var(--navy); color: var(--cream);
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--gold);
+    font-size: 0.95rem; line-height: 1.75;
+    margin-top: 1rem;
+  }
+  .step-highlight strong { color: var(--gold); }
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; font-size: 0.9rem; }
+  .data-table thead tr { background: var(--navy); color: var(--gold); }
+  .data-table thead th {
+    padding: 0.75rem 1rem; text-align: left;
+    font-family: 'DM Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .data-table tbody tr { border-bottom: 1px solid rgba(30,51,96,0.08); }
+  .data-table tbody tr:nth-child(even) { background: rgba(30,51,96,0.03); }
+  .data-table td { padding: 0.7rem 1rem; color: var(--text-muted); }
+  .data-table td:first-child { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--navy); font-weight: 500; }
+  .improvement { color: #2E7D32; font-weight: 700; }
+
+  /* ── IMPACT ── */
+  .impact-section { background: var(--navy); }
+  .impact-section .section-title { color: var(--cream); }
+  .impact-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    margin-top: 3rem;
+  }
+  .impact-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 2.5rem 2rem;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .impact-card:hover {
+    border-color: rgba(201,168,76,0.5);
+    background: rgba(255,255,255,0.08);
+  }
+  .impact-icon {
+    font-size: 2rem; margin-bottom: 1.2rem; display: block;
+  }
+  .impact-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+  .impact-card p {
+    font-size: 0.95rem; color: rgba(248,245,238,0.65);
+    line-height: 1.75;
+  }
+  .impact-card .big-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; font-weight: 900;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 0.5rem; display: block;
+  }
+
+  /* ── PUBLICATIONS ── */
+  .pubs-section { background: var(--cream); }
+  .pub-list { margin-top: 2.5rem; }
+  .pub-item {
+    display: grid; grid-template-columns: auto 1fr; gap: 2rem;
+    padding: 2rem 0; border-bottom: 1px solid rgba(30,51,96,0.1);
+    align-items: start;
+  }
+  .pub-item:first-child { padding-top: 0; }
+  .pub-year {
+    font-family: 'DM Mono', monospace; font-size: 0.7rem;
+    letter-spacing: 0.1em; color: var(--gold); font-weight: 500;
+    min-width: 50px; padding-top: 4px;
+    text-align: center;
+  }
+  .pub-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 600; font-style: italic;
+    color: var(--navy); margin-bottom: 0.35rem;
+    line-height: 1.4;
+  }
+  .pub-journal {
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .pub-badge {
+    display: inline-block; padding: 0.2rem 0.6rem;
+    background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4);
+    font-family: 'DM Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.1em; color: var(--gold); margin-left: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  /* ── ECOSYSTEM MAP ── */
+  .ecosystem-section { background: var(--warm-white); }
+  .ecosystem-visual {
+    margin-top: 3rem;
+    background: var(--navy);
+    padding: 4rem;
+    position: relative; overflow: hidden;
+  }
+  .ecosystem-visual::before {
+    content: '';
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(rgba(201,168,76,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .eco-center {
+    position: relative; z-index: 1;
+    text-align: center; margin-bottom: 3rem;
+  }
+  .eco-center h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; color: var(--gold); font-style: italic;
+  }
+  .eco-center p {
+    color: rgba(248,245,238,0.65); font-size: 0.95rem; margin-top: 0.5rem;
+  }
+  .eco-nodes {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+  }
+  .eco-node {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .eco-node:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); }
+  .eco-node-icon { font-size: 1.8rem; margin-bottom: 0.75rem; display: block; }
+  .eco-node h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--cream); margin-bottom: 0.4rem; }
+  .eco-node p { font-size: 0.82rem; color: rgba(248,245,238,0.55); line-height: 1.5; }
+
+  /* ── CV HIGHLIGHTS ── */
+  .cv-section { background: var(--deep); }
+  .cv-section .section-title { color: var(--cream); }
+  .cv-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    margin-top: 3rem;
+  }
+  .cv-col h3 {
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+  .exp-item { margin-bottom: 2.5rem; }
+  .exp-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; color: var(--cream); font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  .exp-org {
+    font-family: 'DM Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase;
+  }
+  .exp-period {
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    color: var(--text-muted); letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+  .exp-desc { font-size: 0.9rem; color: rgba(248,245,238,0.55); line-height: 1.7; }
+  .edu-item { margin-bottom: 1.8rem; }
+  .edu-degree {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; color: var(--cream); font-style: italic;
+  }
+  .edu-inst {
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase;
+    margin: 0.2rem 0;
+  }
+  .edu-year { font-size: 0.85rem; color: var(--text-muted); }
+  .edu-grade {
+    display: inline-block; padding: 0.15rem 0.6rem;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.3);
+    font-family: 'DM Mono', monospace; font-size: 0.55rem;
+    letter-spacing: 0.1em; color: var(--gold);
+    margin-top: 0.25rem;
+  }
+
+  /* ── TESTIMONIAL / QUOTE ── */
+  .quote-section {
+    background: var(--gold);
+    padding: 5rem 4rem;
+  }
+  .quote-inner {
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+  .big-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+    font-style: italic; font-weight: 600;
+    color: var(--deep); line-height: 1.45;
+    margin-bottom: 1.5rem;
+  }
+  .big-quote::before { content: '\201C'; }
+  .big-quote::after { content: '\201D'; }
+  .quote-attr {
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(11,19,34,0.65);
+  }
+
+  /* ── CONTACT / FOOTER ── */
+  footer {
+    background: var(--deep);
+    padding: 4rem;
+    text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.2);
+  }
+  footer .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; color: var(--cream); margin-bottom: 0.5rem;
+  }
+  footer .footer-role {
+    font-family: 'DM Mono', monospace; font-size: 0.62rem;
+    letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  footer .contact-links {
+    display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  footer .contact-links a {
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.12em; color: rgba(248,245,238,0.6);
+    text-decoration: none; text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  footer .contact-links a:hover { color: var(--gold); }
+  footer .copyright {
+    font-family: 'DM Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.1em; color: rgba(248,245,238,0.25);
+    text-transform: uppercase;
+  }
+
+  /* ── DIVIDER ── */
+  .gold-divider {
+    width: 60px; height: 2px;
+    background: var(--gold); margin: 2rem 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; padding: 4rem 2rem; }
+    .hero-text { order: 2; }
+    .hero-photo-col { order: 1; }
+    .photo-frame { width: 240px; }
+    .hero-ctas { justify-content: center; }
+    .hero-desc { margin: 0 auto 2rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .impact-grid { grid-template-columns: 1fr 1fr; }
+    .eco-nodes { grid-template-columns: repeat(2, 1fr); }
+    .cv-grid { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: repeat(3, 1fr); }
+    .stat { border-right: none; border-bottom: 1px solid rgba(11,19,34,0.15); }
+    section { padding: 5rem 2rem; }
+    .stats-strip { padding: 2rem; }
+    .ecosystem-visual { padding: 2.5rem 1.5rem; }
+    quote-section { padding: 4rem 2rem; }
+    footer { padding: 3rem 2rem; }
+  }
+  @media (max-width: 640px) {
+    .impact-grid { grid-template-columns: 1fr; }
+    .eco-nodes { grid-template-columns: 1fr; }
+    .stats-inner { grid-template-columns: 1fr 1fr; }
+    nav .nav-links { display: none; }
+  }
+
+  /* ── FADE-IN ANIMATION ── */
+  .fade-up {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Dr. Eslam Yacoub · THE Arab World Awards 2026</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#innovation">Innovation</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#publications">Research</a></li>
+    <li><a href="#cv">Profile</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="award-badge">
+        <span class="award-badge-dot"></span>
+        <span>THE Arab World Awards 2026 · Most Innovative Teacher</span>
+      </div>
+      <h1 class="hero-title">
+        Beyond the<br>
+        <em>Classroom</em>
+      </h1>
+      <p class="hero-subtitle">Alamein International University · Egypt</p>
+      <p class="hero-desc">
+        Building a Language Lifeline Ecosystem for Every Student — transforming a systemic gap into a university-wide movement, and a language barrier into a bridge.
+      </p>
+      <div class="hero-ctas">
+        <a href="#innovation" class="btn-gold">Explore the Innovation</a>
+        <a href="#impact" class="btn-outline">See the Impact</a>
+      </div>
+    </div>
+    <div class="hero-photo-col">
+      <div class="photo-frame">
+        <img src="data:image/jpeg;base64,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" alt="Dr. Eslam Yacoub">
+      </div>
+      <div class="photo-caption">
+        <strong>Dr. Eslam Yacoub</strong>
+        <span>Ph.D. · EFL · Founding Director, AIU ELC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat">
+      <span class="stat-num">2,727</span>
+      <span class="stat-label">Students Assessed via AIU-STEP</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Courses Designed &amp; Delivered</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">+30%</span>
+      <span class="stat-label">Average Pass Rate Improvement</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">952</span>
+      <span class="stat-label">Needs Analysis Participants</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">11+</span>
+      <span class="stat-label">Published Research Articles</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <span class="section-tag">The Nominee</span>
+        <h2 class="section-title">Dr. Eslam<br><em>Yacoub</em></h2>
+        <div class="gold-divider"></div>
+        <p>Dr. Eslam Yacoub holds a Master's and PhD in Teaching English for Specific Purposes. Since joining <strong>Alamein International University (AIU)</strong> in 2024, he has designed and implemented the university's entire English language support infrastructure from the ground up.</p>
+        <p>When he joined AIU, he stepped into a bold experiment in Egyptian higher education. Founded in 2020 as a pioneering English-Medium Instruction institution, AIU faced a daunting linguistic reality: <strong>85% of the 2025 incoming cohort had completed their secondary education entirely in Arabic</strong>. These students were enrolled in nine rigorous degree programs — Dentistry, Engineering, Computer Science and more — all taught in English.</p>
+        <p>He recognized that without robust support infrastructure, language would become a barrier to equity and success. He committed himself to <strong>building that bridge</strong>.</p>
+        <p>His nomination is fully supported by Alamein International University. The cumulative impact of his work led directly to the founding of the <strong>AIU English Learning Center</strong> in December 2025, which he now directs.</p>
+      </div>
+      <div class="fade-up" style="transition-delay:0.15s">
+        <div class="submission-title-box">
+          <span class="label">Submission Title</span>
+          <h3>"Beyond the Classroom: Building a Language Lifeline Ecosystem for Every Student"</h3>
+        </div>
+        <ul class="meta-list">
+          <li>
+            <span class="meta-key">Institution</span>
+            <span class="meta-val">Alamein International University</span>
+          </li>
+          <li>
+            <span class="meta-key">Role</span>
+            <span class="meta-val">Lecturer of EFL &amp; Founding Director, AIU English Learning Center</span>
+          </li>
+          <li>
+            <span class="meta-key">Award</span>
+            <span class="meta-val">Most Innovative Teacher of the Year — THE Arab World Awards 2026</span>
+          </li>
+          <li>
+            <span class="meta-key">Email</span>
+            <span class="meta-val">eslam.yacoub@aiu.edu.eg</span>
+          </li>
+          <li>
+            <span class="meta-key">ORCID</span>
+            <span class="meta-val">0000-0003-0022-4007</span>
+          </li>
+          <li>
+            <span class="meta-key">Guided by</span>
+            <span class="meta-val">SDG 4 — Quality Education</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INNOVATION STEPS -->
+<section class="innovation-section" id="innovation">
+  <div class="section-inner">
+    <span class="section-tag">The Innovation Story</span>
+    <h2 class="section-title">Seven Steps to a<br><em>Language Ecosystem</em></h2>
+    <div class="gold-divider"></div>
+
+    <div class="steps-timeline">
+
+      <div class="step-item fade-up">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3 class="step-heading">Diagnosing the Problem — AIU-STEP</h3>
+          <p class="step-sub">Evidence that the gap was real and precisely measured</p>
+          <p>Dr. Yacoub designed the <strong>AIU Standardized Test of English Proficiency (AIU-STEP)</strong> from scratch — a comprehensive, CEFR-aligned instrument spanning four skills: Reading Comprehension (40%), Listening (20%), Grammar (30%), and Writing Analysis (10%), covering 120 items.</p>
+          <div class="step-highlight">
+            <strong>Key Finding:</strong> Of 2,727 incoming students, <strong>1,218 (45%)</strong> placed at B1 or below — lacking proficiency for independent EMI engagement. Of these, <strong>398 (15%)</strong> placed at A1–A2 (near-beginner). Without the AIU-STEP, the scale and urgency of the gap would have remained invisible.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item fade-up">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3 class="step-heading">Building the Foundation — English 1 &amp; English 2</h3>
+          <p class="step-sub">Purpose-built courses for AIU's unique student population</p>
+          <p>Based on AIU-STEP results, Dr. Yacoub designed and delivered two foundational pillars: <strong>LAN022 (English 1)</strong> for the 45% of students below B2, and <strong>LAN111 (English 2)</strong> for the 55% at or above B2. All 2,727 incoming students received targeted language support from day one.</p>
+          <table class="data-table">
+            <thead><tr><th>Code</th><th>Course</th><th>Semester</th><th>Students</th></tr></thead>
+            <tbody>
+              <tr><td>LAN022</td><td>English 1</td><td>Fall 2025</td><td>1,218</td></tr>
+              <tr><td>LAN111</td><td>English 2</td><td>Fall 2025</td><td>1,509</td></tr>
+              <tr><td>LAN171</td><td>English for Computer Sciences</td><td>Spring 2025</td><td>302</td></tr>
+              <tr><td>LAN171</td><td>English for Engineering</td><td>Spring 2025</td><td>214</td></tr>
+              <tr><td>LAN211</td><td>Academic Writing</td><td>Spring 2025</td><td>266</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="step-item fade-up">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3 class="step-heading">Understanding Real Needs — The Needs Analysis</h3>
+          <p class="step-sub">952 participants across students, faculty, and industry</p>
+          <p>To ensure the ESP curriculum was grounded in real student experience, Dr. Yacoub conducted a comprehensive needs analysis reaching <strong>865 students</strong> across all nine programs, plus <strong>64 faculty focus groups</strong> and <strong>23 industry representatives</strong> — a total of 952 participants.</p>
+          <p>This layered approach captured both cross-disciplinary needs and the unique vocabulary and communication demands of each field, directly shaping every course book, glossary, and assessment task.</p>
+          <div class="step-highlight">
+            He also authored <strong>six bilingual English–Arabic disciplinary glossaries</strong> — covering Engineering, Mathematics, Basic Sciences, Business, Medical Purposes, and Arts &amp; Design — distributed to all 2,727 first-year students as an immediate bridge while ESP curricula were being developed.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item fade-up">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3 class="step-heading">Discipline-Specific Support — The ESP Suite</h3>
+          <p class="step-sub">Nine courses for nine programs, grounded in professional reality</p>
+          <p>Dr. Yacoub designed course books for each program. The <strong>Engineering course book</strong> spans eight thematic units — Architecture, Project Management, Electronics, Mechatronics, Oil &amp; Gas, Biomedical Engineering, Materials Science, and Emerging Trends — concluding with a comprehensive A-to-Z glossary.</p>
+          <p>The <strong>Computer Science course book</strong> mirrors a modern CS education, covering Java, Python, cloud computing, machine learning, cybersecurity, and even the ethical dimensions of technology.</p>
+          <table class="data-table">
+            <thead><tr><th>Program</th><th>Students</th><th>Pass Rate Before ESP</th><th>Pass Rate After ESP</th><th>Improvement</th></tr></thead>
+            <tbody>
+              <tr><td>Engineering</td><td>214</td><td>62%</td><td>96%</td><td class="improvement">+34 pts</td></tr>
+              <tr><td>Computer Science</td><td>302</td><td>68%</td><td>94%</td><td class="improvement">+26 pts</td></tr>
+              <tr><td>Combined</td><td>516</td><td>65%</td><td>95%</td><td class="improvement">+30 pts</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="step-item fade-up">
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <h3 class="step-heading">Practice Validated by Science — Five Publications</h3>
+          <p class="step-sub">Five publications that carry AIU's story to the global ESP community</p>
+          <p>Every intervention — the AIU-STEP, the needs analysis, the ESP curricula, the Academic Writing course — has generated original scholarly evidence published in peer-reviewed international journals. AIU's institutional innovations become replicable, globally accessible models.</p>
+          <div class="step-highlight">
+            Publications span <strong>Q1 journals</strong> including the International Arab Journal of English for Specific Purposes, the American Journal of Medicine and Health Studies, and the International Journal of English for Specific Purposes (JOINESP), across 2025–2026.
+          </div>
+        </div>
+      </div>
+
+      <div class="step-item fade-up">
+        <div class="step-num">06</div>
+        <div class="step-body">
+          <h3 class="step-heading">Beyond the Classroom — Mentorship, Writing &amp; Community</h3>
+          <p class="step-sub">Engagement that extends far beyond formal teaching hours</p>
+          <p>Dr. Yacoub established a <strong>weekly Conversation Club</strong> and appointed <strong>24 high-proficiency peer mentors</strong> across all programs. He dedicated over <strong>320 office hours</strong> in 2025 to personalized writing and language consultations.</p>
+          <p>He also proposed and submitted the <strong>Alamein International Journal of Research (AIJR)</strong> — a quarterly, peer-reviewed journal dedicated to outstanding undergraduate research. Students who arrived unable to write a paragraph in English are now preparing manuscripts for its inaugural issue.</p>
+        </div>
+      </div>
+
+      <div class="step-item fade-up">
+        <div class="step-num">07</div>
+        <div class="step-body">
+          <h3 class="step-heading">Measurable Impact — The English Learning Center</h3>
+          <p class="step-sub">The culmination: an institution transformed</p>
+          <p>In December 2025, Dr. Yacoub's work culminated in the founding of the <strong>AIU English Learning Center</strong>, with himself as Founding Director. In its inaugural semester alone, the Center reached <strong>310 students</strong> through two flagship services.</p>
+          <div class="step-highlight">
+            <strong>Conversation Club:</strong> 14 weekly sessions, 242 cumulative attendances, 19 permanent peer mentors.<br>
+            <strong>Academic Writing Consultation Service:</strong> 68 individual one-to-one sessions supporting graduation projects and peer-review-ready research papers.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact-section" id="impact">
+  <div class="section-inner">
+    <span class="section-tag" style="color:var(--gold-light)">The Impact Story</span>
+    <h2 class="section-title">Measurable,<br>Transformational <em style="color:var(--gold)">Change</em></h2>
+    <div class="gold-divider"></div>
+    <div class="impact-grid">
+      <div class="impact-card fade-up">
+        <span class="impact-icon">📊</span>
+        <span class="big-num">96%</span>
+        <h3>Engineering Pass Rate</h3>
+        <p>Up from 62% before ESP intervention — a 34 percentage-point transformation in core technical module performance.</p>
+      </div>
+      <div class="impact-card fade-up" style="transition-delay:0.1s">
+        <span class="impact-icon">💻</span>
+        <span class="big-num">94%</span>
+        <h3>Computer Science Pass Rate</h3>
+        <p>Up from 68% — 302 students gained the language foundation to succeed in AI, coding, and software engineering.</p>
+      </div>
+      <div class="impact-card fade-up" style="transition-delay:0.2s">
+        <span class="impact-icon">📚</span>
+        <span class="big-num">2,727</span>
+        <h3>Students Placed</h3>
+        <p>Every single incoming student assessed and placed into the right language support course from day one.</p>
+      </div>
+      <div class="impact-card fade-up" style="transition-delay:0.3s">
+        <span class="impact-icon">🌍</span>
+        <span class="big-num">952</span>
+        <h3>Needs Analysis Voices</h3>
+        <p>Students, faculty, and industry professionals whose input shaped curricula grounded in professional reality.</p>
+      </div>
+      <div class="impact-card fade-up" style="transition-delay:0.4s">
+        <span class="impact-icon">🏛️</span>
+        <span class="big-num">ELC</span>
+        <h3>English Learning Center</h3>
+        <p>Founded December 2025. A thriving academic hub serving all nine programs — the institutional legacy of one year's work.</p>
+      </div>
+      <div class="impact-card fade-up" style="transition-delay:0.5s">
+        <span class="impact-icon">📝</span>
+        <span class="big-num">320+</span>
+        <h3>Office Hours in 2025</h3>
+        <p>Personalized writing and language consultations — evidence of a commitment that extends far beyond the classroom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM -->
+<section class="ecosystem-section">
+  <div class="section-inner">
+    <span class="section-tag">The Language Ecosystem</span>
+    <h2 class="section-title">An Interconnected<br><em>System</em> for Every Student</h2>
+    <div class="gold-divider"></div>
+    <div class="ecosystem-visual fade-up">
+      <div class="eco-center">
+        <h3>AIU English Learning Center</h3>
+        <p>The institutional hub connecting every initiative — founded December 2025</p>
+      </div>
+      <div class="eco-nodes">
+        <div class="eco-node">
+          <span class="eco-node-icon">🎯</span>
+          <h4>AIU-STEP</h4>
+          <p>CEFR-aligned placement test. Diagnoses every student precisely from day one.</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">📖</span>
+          <h4>Foundational English</h4>
+          <p>LAN022 &amp; LAN111 — two courses for two proficiency levels, serving all 2,727 students.</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">🔬</span>
+          <h4>ESP Suite</h4>
+          <p>Nine discipline-specific English courses — from Engineering to Dentistry — grounded in needs analysis.</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">✍️</span>
+          <h4>Academic Writing</h4>
+          <p>LAN211 feeds directly into the proposed Alamein International Journal of Research (AIJR).</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">📘</span>
+          <h4>Bilingual Glossaries</h4>
+          <p>Six English–Arabic glossaries distributed to all first-year students as an immediate support bridge.</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">🤝</span>
+          <h4>Peer Mentorship</h4>
+          <p>24 high-proficiency mentors across all programs — a self-sustaining support network.</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">💬</span>
+          <h4>Conversation Club</h4>
+          <p>Weekly sessions where hesitation gives way to confidence — 242 attendances in the first semester.</p>
+        </div>
+        <div class="eco-node">
+          <span class="eco-node-icon">🌐</span>
+          <h4>Published Research</h4>
+          <p>Every innovation documented in Q1 peer-reviewed journals, making AIU's model globally replicable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <div class="quote-inner fade-up">
+    <p class="big-quote">In a single year, he turned a systemic gap into a university-wide movement — and a language barrier into a bridge.</p>
+    <p class="quote-attr">— THE Arab World Awards 2026 Submission · Alamein International University</p>
+  </div>
+</div>
+
+<!-- PUBLICATIONS -->
+<section class="pubs-section" id="publications">
+  <div class="section-inner">
+    <span class="section-tag">Scholarly Contributions</span>
+    <h2 class="section-title">Research That<br>Travels <em>Beyond</em> the Institution</h2>
+    <div class="gold-divider"></div>
+    <div class="pub-list">
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2026</div>
+        <div>
+          <p class="pub-title">Rewriting the Curriculum: Integrating AI Prompt Engineering into EFL Writing Instruction</p>
+          <p class="pub-journal">International Arab Journal of English for Specific Purposes (IAJESP) · Vol 9(1) <span class="pub-badge">Q1</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2026</div>
+        <div>
+          <p class="pub-title">Assessment Practices in ESP Courses: Towards Authentic Evaluation in Higher Education</p>
+          <p class="pub-journal">Journal of Advanced Research in English &amp; Education · Vol 11(1) <span class="pub-badge">Q1</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div>
+          <p class="pub-title">Developing and Scaling a CEFR-Aligned English Placement Test for University Level: A Psychometric Validation Study</p>
+          <p class="pub-journal">Journal of Language Learning and Assessment · Vol 3(2) <span class="pub-badge">Q1</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div>
+          <p class="pub-title">Corpus-Based Mapping of Lexical Disparities within Receptive and Productive Skills in ESP Contexts</p>
+          <p class="pub-journal">International Journal of English for Specific Purposes (JOINESP) · Vol 3(2) <span class="pub-badge">Q1</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div>
+          <p class="pub-title">Mapping Discipline-Specific English Language Needs in Egyptian Medical EMI University Programs</p>
+          <p class="pub-journal">American Journal of Medicine and Health Studies · Vol 2(1) <span class="pub-badge">Q2</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div>
+          <p class="pub-title">Aligning English Language Instruction with Engineering Needs: A Comprehensive Needs Analysis Framework for ESP Syllabus Design</p>
+          <p class="pub-journal">Anatolian Journal of Education · Vol 10(2) <span class="pub-badge">Q1</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div>
+          <p class="pub-title">Designing a CLIL-Based ESP Curriculum for Computer Science and Engineering Programs at Alamein International University</p>
+          <p class="pub-journal">International Journal of Curriculum and Instruction · Vol 17(1) <span class="pub-badge">Q1</span></p>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2024</div>
+        <div>
+          <p class="pub-title">A Proposed Framework for Developing EFL Curriculum for Secondary Stage in the Light of the CLIL Approach</p>
+          <p class="pub-journal">International Journal of Curriculum &amp; Technological Education · Vol 27(15)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CV HIGHLIGHTS -->
+<section class="cv-section" id="cv">
+  <div class="section-inner">
+    <span class="section-tag" style="color:var(--gold-light)">Academic Profile</span>
+    <h2 class="section-title">Experience &amp;<br><em>Education</em></h2>
+    <div class="gold-divider"></div>
+
+    <div class="cv-grid">
+      <div class="cv-col">
+        <h3>Professional Experience</h3>
+
+        <div class="exp-item fade-up">
+          <p class="exp-role">Lecturer of EFL &amp; Founding Director, English Learning Center</p>
+          <p class="exp-org">Alamein International University, Egypt</p>
+          <p class="exp-period">2024 – Present</p>
+          <p class="exp-desc">Designed and delivered ESP &amp; academic English courses across eight programs. Architected the AIU-STEP placement test, founded the ELC, and led a university-wide curriculum reform integrating CLIL and needs-based design.</p>
+        </div>
+
+        <div class="exp-item fade-up">
+          <p class="exp-role">Director, University Center for Career Development</p>
+          <p class="exp-org">Alamein International University, Egypt</p>
+          <p class="exp-period">2023 – 2024</p>
+          <p class="exp-desc">Led strategic career readiness initiatives, organized multi-sector job fairs, and secured MOUs with key organizations to expand career opportunities.</p>
+        </div>
+
+        <div class="exp-item fade-up">
+          <p class="exp-role">Head of Training Department</p>
+          <p class="exp-org">Scientific Academy for Translation &amp; Training, Alexandria</p>
+          <p class="exp-period">2017 – 2023</p>
+          <p class="exp-desc">Directed development of bespoke ESP and EFL programs for corporate clients. Pioneered CAT tools workshops and oversaw all content quality assurance.</p>
+        </div>
+
+        <div class="exp-item fade-up">
+          <p class="exp-role">English Instructor</p>
+          <p class="exp-org">Ministry of Defense Language Institute (MODLI)</p>
+          <p class="exp-period">2006 – 2012</p>
+          <p class="exp-desc">Taught specialized English for Military Purposes in a high-stakes professional environment, developing custom EFL learning materials.</p>
+        </div>
+      </div>
+
+      <div class="cv-col">
+        <h3>Education</h3>
+
+        <div class="edu-item fade-up">
+          <p class="edu-degree">Doctor of Philosophy (Ph.D.) in Education — EFL Curriculum &amp; Instruction</p>
+          <p class="edu-inst">Cairo University – Faculty of Graduate Studies for Education</p>
+          <p class="edu-year">2024</p>
+          <p class="edu-desc" style="font-size:0.88rem;color:rgba(248,245,238,0.5);margin-top:0.4rem;line-height:1.6">
+            Dissertation: Developing EFL Curriculum for Secondary Stage in the Light of the CLIL Approach and Its Effectiveness in Developing ESP Integrated Skills
+          </p>
+          <span class="edu-grade">GPA 4.0 · A+</span>
+        </div>
+
+        <div class="edu-item fade-up">
+          <p class="edu-degree">Master of Education (M.Ed.) — EFL Curriculum &amp; Instruction</p>
+          <p class="edu-inst">Cairo University – Faculty of Graduate Studies for Education</p>
+          <p class="edu-year">2020</p>
+          <p class="edu-desc" style="font-size:0.88rem;color:rgba(248,245,238,0.5);margin-top:0.4rem;line-height:1.6">
+            Thesis: A Suggested Program Based on ESP to Enhance Scientific Literacy for Students Applying to Medical Faculties
+          </p>
+          <span class="edu-grade">GPA 3.66 · A+</span>
+        </div>
+
+        <div class="edu-item fade-up">
+          <p class="edu-degree">Special Diploma in Education (EFL Curriculum &amp; Instruction)</p>
+          <p class="edu-inst">Tanta University – Faculty of Education</p>
+          <p class="edu-year">2008 · Very Good</p>
+        </div>
+
+        <div class="edu-item fade-up">
+          <p class="edu-degree">Vocational Diploma in Education (TEFL)</p>
+          <p class="edu-inst">Tanta University – Faculty of Education</p>
+          <p class="edu-year">2007 · Very Good</p>
+        </div>
+
+        <div class="edu-item fade-up">
+          <p class="edu-degree">Bachelor of Arts and Education, English Department (TEFL)</p>
+          <p class="edu-inst">Sadat University – Faculty of Education</p>
+          <p class="edu-year">2006</p>
+        </div>
+
+        <h3 style="margin-top:2.5rem">Peer Review Service</h3>
+        <div class="exp-item fade-up">
+          <p class="exp-desc">Active reviewer for: International Journal of Curriculum and Instruction (Q1), Studies in Second Language Learning and Teaching (Q1), International Arab Journal of English for Specific Purposes (Q1), and three additional Q1 journals. Over 17 manuscripts reviewed (2024–present).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-name">Dr. Eslam Yacoub</p>
+  <p class="footer-role">Lecturer of EFL · Founding Director, AIU English Learning Center · Ph.D.</p>
+  <div class="contact-links">
+    <a href="mailto:eslam.yacoub@aiu.edu.eg">eslam.yacoub@aiu.edu.eg</a>
+    <a href="https://linkedin.com/eslamyacoub" target="_blank">LinkedIn</a>
+    <a href="https://orcid.org/0000-0003-0022-4007" target="_blank">ORCID</a>
+    <a href="https://www.aiu.edu.eg" target="_blank">Alamein International University</a>
+  </div>
+  <p class="copyright">THE Arab World Awards 2026 · Most Innovative Teacher of the Year Submission · Alamein International University</p>
+</footer>
+
+<script>
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Smooth active nav
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--gold)' : '';
+    });
+  });
+</script>
+</body>
+</html>
